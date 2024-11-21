@@ -30,7 +30,7 @@ const Home = () => {
     if (event) {
       event.preventDefault();
     }
-    fetch(`${process.env.REACT_APP_API_URL}?month=${month}`)
+    fetch(`${process.env.REACT_APP_API_URL}/api/data?month=${month}`)
       .then((response) => {
         if (!response.ok) throw new Error("Error fetching data");
         return response.json();
